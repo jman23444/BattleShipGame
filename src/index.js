@@ -1,5 +1,13 @@
 import './styles/main.css';
-import { startGame } from './controllers/gameController';
+import './styles/reset.css';
+// import { loadingScreen } from './views/loadingScreen';
+import GameController from './controllers/gameController.js';
 
-startGame();
+// Initialize the game controller
+// const gameController = new GameController();
+// gameController.init();
 
+document.addEventListener('DOMContentLoaded', () => {
+    const gameController = new GameController();
+    gameController.init();
+  });

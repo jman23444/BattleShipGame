@@ -1,0 +1,165 @@
+
+/* loadingScreen.js */
+
+#loading-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding-bottom: 128px;
+    gap: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 53.67%), url(/src/assets/battleshipLoadingScreen.jpg) lightgray 50% / cover no-repeat;
+}
+
+h1 {
+    color: #f6a600;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--Default-Text, #373530);
+    font-family: "Inknut Antiqua";
+    font-size: 122px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#start-game {
+    background-color: transparent;
+    color: #f6a600; /* Gold/orange tone */
+    border: 2px solid #f6a600;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #start-game:hover {
+    background-color: #f6a600;
+    color: #000;
+  }
+  
+
+  /* shipPlacement.js */
+
+  body {
+    background-color: #1a2b3c;
+    color: #f5c542;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+  }
+  
+  #game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  #ship-placement-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    color: #f5c542;
+  }
+  
+  #ship-placement-screen h2 {
+    font-size: 2.5rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--Default-Text, #373530);
+    font-family: "Inknut Antiqua";
+    margin-bottom: 0.5rem;
+  }
+  
+  #ship-placement-screen p {
+    font-size: 1.2rem;
+    font-family: "Inknut Antiqua";
+    margin-bottom: 1.5rem;
+  }
+  
+  .game-container {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 1px;
+    background-color: #ccc;
+  }
+  
+  .grid-cell {
+    background-color: #fff;
+    border: 1px solid #999;
+  }
+  
+  .grid-cell.occupied {
+    background-color: #4caf50;
+  }
+  
+  .grid-cell.preview.valid {
+    background-color: #90ee90;
+  }
+  
+  .grid-cell.preview.invalid {
+    background-color: #ff6347;
+  }
+  
+  .ship-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .ship {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1px;
+    cursor: pointer;
+    padding: 0;                 
+    margin: 0;                  
+    width: fit-content;         
+    height: fit-content;        
+  }
+  
+  .ship-segment {
+    width: 40px;
+    height: 40px;
+    background-color: #4caf50;
+    border: 1px solid #2e7d32;
+  }
+  
+  .ship.active {
+    background-color: #90ee90;
+  }
+  
+  .ship.active .ship-segment {
+    background-color: #90ee90;
+  }
+  
+  #continue-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f5c542;
+    border: none;
+    color: #1a2b3c;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  #continue-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  #error-message {
+    margin-top: 1rem;
+  }
