@@ -43,7 +43,6 @@ export default function renderShipPlacementScreen() {
       shipDiv.dataset.type = ship.type;
       shipDiv.dataset.size = ship.size;
       shipDiv.dataset.orientation = 'horizontal';
-  
       for (let i = 0; i < ship.size; i++) {
         const shipSegment = document.createElement('div');
         shipSegment.className = 'ship-segment';
