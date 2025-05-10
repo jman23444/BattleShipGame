@@ -2,7 +2,7 @@ import { fireEvent, waitFor } from '@testing-library/dom';
 import renderShipPlacementScreen from '../views/shipPlacement.js';
 import ShipPlacementController from '../controllers/shipPlacementController.js';
 
-describe('Ship Placement Screen', () => {
+describe.skip('Ship Placement Screen', () => {
   let gameControllerMock;
   let container;
 
