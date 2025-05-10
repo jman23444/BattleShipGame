@@ -1,0 +1,56 @@
+/* Reset default browser styles for consistency */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default hyperlink styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Normalize button and input styles */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Remove default button cursor */
+button {
+  cursor: pointer;
+}
+
+/* Ensure images are responsive and don't exceed their container */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Normalize typography */
+body {
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+/* Remove default focus outlines for accessibility-friendly styling */
+:focus {
+  outline: none;
+}
